@@ -2,7 +2,7 @@
 
 This repository contains an inference-only evaluation pipeline for detecting and analyzing hallucinations in multimodal large language models (MLLMs). The experiments compare a closed-source model (`gpt-5.4`) and an open-source model (`Qwen/Qwen3-VL-8B-Instruct`) on visual question answering, visual mathematical reasoning, and an OCR/text-rich reasoning extension.
 
-The repository is organized as a reproducible code package. Final report and slide deliverables are kept outside this repository; generated documents, raw downloads, raw model responses, caches, and local credentials are excluded.
+The repository is organized as a reproducible code package.
 
 ## Evaluation Scope
 
