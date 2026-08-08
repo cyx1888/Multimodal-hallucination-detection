@@ -130,7 +130,6 @@ Run error analysis over judged outputs:
 python scripts/analyze_errors.py ^
   --input_dir outputs/judge_results ^
   --annotation data/annotations/human_annotation_all_merged.jsonl ^
-  --output_dir
 ```
 
 Generate the compact image-aware judge summary after full judged JSONL files are available:
