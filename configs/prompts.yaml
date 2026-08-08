@@ -20,6 +20,13 @@ mathvista_direct: |
   Give the final answer concisely.
 
   Question: {question}
+  
+mathvista_cot: |
+  Solve the problem based only on the image and the question.
+  Reason step by step using only visible evidence.
+  Then provide the final answer in the format: Final answer: <answer>.
+
+  Question: {question}
 
 logicocr_direct: |
   Read the text in the image and answer the question.
@@ -38,12 +45,6 @@ logicocr_cot: |
   Question:
   {question}
 
-mathvista_cot: |
-  Solve the problem based only on the image and the question.
-  Reason step by step using only visible evidence.
-  Then provide the final answer in the format: Final answer: <answer>.
-
-  Question: {question}
 
 # === Judge Prompts ===
 
