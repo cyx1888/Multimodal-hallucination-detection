@@ -1,0 +1,136 @@
+[
+  {
+    "task": "logicocr",
+    "model": "Qwen/Qwen3-VL-8B-Instruct",
+    "prompt_mode": "cot",
+    "total_samples": 50,
+    "hallucinated": 14,
+    "hallucination_rate": 0.28,
+    "type_distribution": {
+      "visual_grounding_error": 2,
+      "factual_inconsistency": 2,
+      "reasoning_hallucination": 10
+    }
+  },
+  {
+    "task": "logicocr",
+    "model": "Qwen/Qwen3-VL-8B-Instruct",
+    "prompt_mode": "direct",
+    "total_samples": 50,
+    "hallucinated": 0,
+    "hallucination_rate": 0.0,
+    "type_distribution": {}
+  },
+  {
+    "task": "logicocr",
+    "model": "gpt-5.4",
+    "prompt_mode": "cot",
+    "total_samples": 50,
+    "hallucinated": 4,
+    "hallucination_rate": 0.08,
+    "type_distribution": {
+      "reasoning_hallucination": 4
+    }
+  },
+  {
+    "task": "logicocr",
+    "model": "gpt-5.4",
+    "prompt_mode": "direct",
+    "total_samples": 50,
+    "hallucinated": 0,
+    "hallucination_rate": 0.0,
+    "type_distribution": {}
+  },
+  {
+    "task": "mathvista",
+    "model": "Qwen/Qwen3-VL-8B-Instruct",
+    "prompt_mode": "cot",
+    "total_samples": 100,
+    "hallucinated": 29,
+    "hallucination_rate": 0.29,
+    "type_distribution": {
+      "reasoning_hallucination": 3,
+      "visual_grounding_error": 24,
+      "factual_inconsistency": 2
+    }
+  },
+  {
+    "task": "mathvista",
+    "model": "Qwen/Qwen3-VL-8B-Instruct",
+    "prompt_mode": "direct",
+    "total_samples": 100,
+    "hallucinated": 1,
+    "hallucination_rate": 0.01,
+    "type_distribution": {
+      "reasoning_hallucination": 1
+    }
+  },
+  {
+    "task": "mathvista",
+    "model": "gpt-5.4",
+    "prompt_mode": "cot",
+    "total_samples": 100,
+    "hallucinated": 15,
+    "hallucination_rate": 0.15,
+    "type_distribution": {
+      "visual_grounding_error": 12,
+      "factual_inconsistency": 2,
+      "reasoning_hallucination": 1
+    }
+  },
+  {
+    "task": "mathvista",
+    "model": "gpt-5.4",
+    "prompt_mode": "direct",
+    "total_samples": 100,
+    "hallucinated": 5,
+    "hallucination_rate": 0.05,
+    "type_distribution": {
+      "factual_inconsistency": 1,
+      "visual_grounding_error": 3,
+      "reasoning_hallucination": 1
+    }
+  },
+  {
+    "task": "pope",
+    "model": "Qwen/Qwen3-VL-8B-Instruct",
+    "prompt_mode": "cot",
+    "total_samples": 300,
+    "hallucinated": 2,
+    "hallucination_rate": 0.0067,
+    "type_distribution": {
+      "visual_grounding_error": 2
+    }
+  },
+  {
+    "task": "pope",
+    "model": "Qwen/Qwen3-VL-8B-Instruct",
+    "prompt_mode": "direct",
+    "total_samples": 300,
+    "hallucinated": 0,
+    "hallucination_rate": 0.0,
+    "type_distribution": {}
+  },
+  {
+    "task": "pope",
+    "model": "gpt-5.4",
+    "prompt_mode": "cot",
+    "total_samples": 300,
+    "hallucinated": 29,
+    "hallucination_rate": 0.0967,
+    "type_distribution": {
+      "visual_grounding_error": 22,
+      "reasoning_hallucination": 3,
+      "factual_inconsistency": 4
+    }
+  },
+  {
+    "task": "pope",
+    "model": "gpt-5.4",
+    "prompt_mode": "direct",
+    "total_samples": 300,
+    "hallucinated": 0,
+    "hallucination_rate": 0.0,
+    "type_distribution": {}
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "task": "mathvista",
+  "input_file": "outputs\\judge_results_v2\\mathvista_Qwen_Qwen3-VL-8B-Instruct_direct_judged.jsonl",
+  "n_samples": 100,
+  "task_performance": {
+    "total": 100,
+    "correct": 49,
+    "invalid": 0,
+    "accuracy": 0.49
+  },
+  "judge_hallucination": {
+    "total": 100,
+    "hallucinated": 1,
+    "non_hallucinated": 99,
+    "unknown": 0,
+    "hallucination_rate": 0.01,
+    "type_distribution": {
+      "reasoning_hallucination": 1
+    },
+    "type_percentages": {
+      "reasoning_hallucination": 100.0
+    }
+  }
+}

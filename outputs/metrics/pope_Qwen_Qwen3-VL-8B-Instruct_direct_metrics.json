@@ -1,0 +1,43 @@
+{
+  "task": "pope",
+  "input_file": "outputs\\judge_results_v2\\pope_Qwen_Qwen3-VL-8B-Instruct_direct_judged.jsonl",
+  "n_samples": 300,
+  "task_performance": {
+    "total_valid": 300,
+    "invalid": 0,
+    "accuracy": 0.8567,
+    "precision": 0.935,
+    "recall": 0.7667,
+    "f1": 0.8425,
+    "yes_rate": 0.41,
+    "object_hallucination_rate": 0.0533,
+    "confusion_matrix": {
+      "TP": 115,
+      "FP": 8,
+      "TN": 142,
+      "FN": 35
+    }
+  },
+  "rule_hallucination": {
+    "total": 300,
+    "hallucinated": 8,
+    "non_hallucinated": 292,
+    "unknown": 0,
+    "hallucination_rate": 0.0267,
+    "type_distribution": {
+      "object_hallucination": 8
+    },
+    "type_percentages": {
+      "object_hallucination": 100.0
+    }
+  },
+  "judge_hallucination": {
+    "total": 300,
+    "hallucinated": 0,
+    "non_hallucinated": 297,
+    "unknown": 3,
+    "hallucination_rate": 0.0,
+    "type_distribution": {},
+    "type_percentages": {}
+  }
+}

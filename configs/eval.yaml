@@ -1,0 +1,62 @@
+# Evaluation configuration
+
+# === Sampling Settings ===
+sampling:
+  pope:
+    total_samples: 300  # Per model per prompt mode
+    balanced: true       # Equal positive/negative
+    random_seed: 42
+  mathvista:
+    total_samples: 100   # Per model per prompt mode
+    stratified: true     # By question type
+    random_seed: 42
+
+# === Human Annotation ===
+human_annotation:
+  total_samples: 40
+  pope_samples: 20
+  mathvista_samples: 20
+  annotators: 1  # Number of human annotators
+  blind: true   # Hide model name during annotation
+
+# === Hallucination Taxonomy ===
+taxonomy:
+  types:
+    - visual_grounding_error
+    - factual_inconsistency
+    - reasoning_hallucination
+  primary_error_principle: true  # Use primary error source for labeling
+
+# === Answer Normalization Rules ===
+answer_normalization:
+  pope:
+    yes_patterns: ["yes", "yeah", "there is", "present", "exists", "correct", "true"]
+    no_patterns: ["no", "not", "absent", "doesn't", "does not", "incorrect", "false", "none"]
+  mathvista:
+    # For MathVista, normalize by stripping whitespace, lowercasing,
+    # and extracting the last numeric/option answer
+
+# === Metrics ===
+metrics:
+  task_performance:
+    - accuracy
+    - precision
+    - recall
+    - f1
+  hallucination:
+    - hallucination_rate
+    - object_hallucination_rate  # POPE-specific: FP / negative_samples
+    - type_distribution
+  detector_agreement:
+    - accuracy
+    - precision
+    - recall
+    - f1
+    - cohens_kappa
+
+# === Output Settings ===
+output:
+  format: jsonl
+  save_raw_responses: true
+  save_rationale: true
+  timestamp: true

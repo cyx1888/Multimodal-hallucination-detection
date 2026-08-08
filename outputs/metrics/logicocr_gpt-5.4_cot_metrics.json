@@ -1,0 +1,24 @@
+{
+  "task": "logicocr",
+  "input_file": "outputs\\judge_results_v2\\logicocr_gpt-5.4_cot_judged.jsonl",
+  "n_samples": 50,
+  "task_performance": {
+    "total": 50,
+    "correct": 42,
+    "invalid": 0,
+    "accuracy": 0.84
+  },
+  "judge_hallucination": {
+    "total": 50,
+    "hallucinated": 4,
+    "non_hallucinated": 46,
+    "unknown": 0,
+    "hallucination_rate": 0.08,
+    "type_distribution": {
+      "reasoning_hallucination": 4
+    },
+    "type_percentages": {
+      "reasoning_hallucination": 100.0
+    }
+  }
+}

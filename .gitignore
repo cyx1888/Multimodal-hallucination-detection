@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Credentials and local config
+.env
+*.key
+credentials.json
+service-account.json
+
+# Downloaded datasets and generated image assets
+download/
+data/raw/
+data/sampled/**/images/
+
+# Generated or bulky experiment outputs
+outputs/model_answers*/
+outputs/judge_results*/
+outputs/mllm_judge_human_subset/
+outputs/**/*.jsonl
+
+# Keep compact result summaries
+!outputs/
+!outputs/metrics/
+!outputs/metrics/*.json
+!outputs/figures/
+!outputs/figures/*.json
+!outputs/mllm_judge_full/
+!outputs/mllm_judge_full/*_mllm_metrics.json
+!outputs/mllm_judge_full/full_mllm_judge_summary.json
+!outputs/mllm_judge_full/full_mllm_judge_summary.csv
+
+# Generated report and presentation artifacts
+report/
+reports/
+*.docx
+*.pptx
+*.pdf
+
+# Local process notes
+PROJECT_HANDOFF_*.md
+
+# IDE and assistant metadata
+.idea/
+.vscode/
+.claude/
+.cursor/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/

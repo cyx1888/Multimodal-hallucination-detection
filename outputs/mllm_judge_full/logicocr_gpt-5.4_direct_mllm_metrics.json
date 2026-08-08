@@ -1,0 +1,62 @@
+{
+  "overall_60": {
+    "N": 0,
+    "TP": 0,
+    "FP": 0,
+    "TN": 0,
+    "FN": 0,
+    "accuracy": null,
+    "precision": null,
+    "recall": null,
+    "f1": null,
+    "cohens_kappa": null
+  },
+  "main_40": {
+    "N": 0,
+    "TP": 0,
+    "FP": 0,
+    "TN": 0,
+    "FN": 0,
+    "accuracy": null,
+    "precision": null,
+    "recall": null,
+    "f1": null,
+    "cohens_kappa": null
+  },
+  "pope_20": {
+    "N": 0,
+    "TP": 0,
+    "FP": 0,
+    "TN": 0,
+    "FN": 0,
+    "accuracy": null,
+    "precision": null,
+    "recall": null,
+    "f1": null,
+    "cohens_kappa": null
+  },
+  "mathvista_20": {
+    "N": 0,
+    "TP": 0,
+    "FP": 0,
+    "TN": 0,
+    "FN": 0,
+    "accuracy": null,
+    "precision": null,
+    "recall": null,
+    "f1": null,
+    "cohens_kappa": null
+  },
+  "logicocr_20": {
+    "N": 0,
+    "TP": 0,
+    "FP": 0,
+    "TN": 0,
+    "FN": 0,
+    "accuracy": null,
+    "precision": null,
+    "recall": null,
+    "f1": null,
+    "cohens_kappa": null
+  }
+}

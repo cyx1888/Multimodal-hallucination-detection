@@ -1,0 +1,51 @@
+{
+  "task": "pope",
+  "input_file": "outputs\\judge_results_v2\\pope_gpt-5.4_cot_judged.jsonl",
+  "n_samples": 300,
+  "task_performance": {
+    "total_valid": 297,
+    "invalid": 3,
+    "accuracy": 0.8552,
+    "precision": 0.8824,
+    "recall": 0.8163,
+    "f1": 0.8481,
+    "yes_rate": 0.4579,
+    "object_hallucination_rate": 0.1067,
+    "confusion_matrix": {
+      "TP": 120,
+      "FP": 16,
+      "TN": 134,
+      "FN": 27
+    }
+  },
+  "rule_hallucination": {
+    "total": 300,
+    "hallucinated": 16,
+    "non_hallucinated": 284,
+    "unknown": 0,
+    "hallucination_rate": 0.0533,
+    "type_distribution": {
+      "object_hallucination": 16
+    },
+    "type_percentages": {
+      "object_hallucination": 100.0
+    }
+  },
+  "judge_hallucination": {
+    "total": 300,
+    "hallucinated": 29,
+    "non_hallucinated": 269,
+    "unknown": 2,
+    "hallucination_rate": 0.0967,
+    "type_distribution": {
+      "visual_grounding_error": 22,
+      "reasoning_hallucination": 3,
+      "factual_inconsistency": 4
+    },
+    "type_percentages": {
+      "visual_grounding_error": 75.9,
+      "reasoning_hallucination": 10.3,
+      "factual_inconsistency": 13.8
+    }
+  }
+}

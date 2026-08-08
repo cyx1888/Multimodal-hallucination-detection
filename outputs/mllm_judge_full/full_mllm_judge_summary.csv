@@ -1,0 +1,13 @@
+﻿Task,Model,Prompt,N,Accuracy,Correct,MLLM_HR,MLLM_Hall,MLLM_Unknown,MLLM_Type_Dist
+pope,gpt-5.4,direct,300,0.87,261,0.0333,10,0,visual_grounding_error:10
+pope,gpt-5.4,cot,300,0.8552,254,0.0633,19,2,visual_grounding_error:19
+pope,Qwen3-VL-8B,direct,300,0.8567,257,0.0267,8,1,visual_grounding_error:8
+pope,Qwen3-VL-8B,cot,300,0.8467,254,0.0733,22,0,visual_grounding_error:22
+mathvista,gpt-5.4,direct,100,0.71,71,0.06,6,1,visual_grounding_error:6
+mathvista,gpt-5.4,cot,100,0.74,74,0.08,8,1,"reasoning_hallucination:1, visual_grounding_error:7"
+mathvista,Qwen3-VL-8B,direct,100,0.49,49,0.16,16,0,"factual_inconsistency:2, visual_grounding_error:14"
+mathvista,Qwen3-VL-8B,cot,100,0.33,33,0.33,33,1,"reasoning_hallucination:8, visual_grounding_error:25"
+logicocr,gpt-5.4,direct,50,0.76,38,0.0,0,0,-
+logicocr,gpt-5.4,cot,50,0.84,42,0.0,0,0,-
+logicocr,Qwen3-VL-8B,direct,50,0.6,30,0.0,0,0,-
+logicocr,Qwen3-VL-8B,cot,50,0.66,33,0.14,7,0,reasoning_hallucination:7

@@ -1,0 +1,318 @@
+{
+  "pope": {
+    "gpt-5.4/direct": {
+      "n_samples": 300,
+      "accuracy": {
+        "total": 300,
+        "correct": 261,
+        "accuracy": 0.87,
+        "source": "outputs\\metrics_v2\\pope_gpt-5.4_direct_metrics.json"
+      },
+      "mllm_judge": {
+        "total": 300,
+        "hallucinated": 10,
+        "non_hallucinated": 290,
+        "unknown": 0,
+        "hallucination_rate": 0.0333,
+        "type_distribution": {
+          "visual_grounding_error": 10
+        },
+        "type_percentages": {
+          "visual_grounding_error": 100.0
+        }
+      },
+      "rule_detector": {
+        "total": 300,
+        "hallucinated": 12,
+        "non_hallucinated": 288,
+        "unknown": 0,
+        "hallucination_rate": 0.04,
+        "type_distribution": {
+          "object_hallucination": 12
+        },
+        "type_percentages": {
+          "object_hallucination": 100.0
+        }
+      }
+    },
+    "gpt-5.4/cot": {
+      "n_samples": 300,
+      "accuracy": {
+        "total": 297,
+        "correct": 254,
+        "accuracy": 0.8552,
+        "source": "outputs\\metrics_v2\\pope_gpt-5.4_cot_metrics.json"
+      },
+      "mllm_judge": {
+        "total": 300,
+        "hallucinated": 19,
+        "non_hallucinated": 279,
+        "unknown": 2,
+        "hallucination_rate": 0.0633,
+        "type_distribution": {
+          "visual_grounding_error": 19
+        },
+        "type_percentages": {
+          "visual_grounding_error": 100.0
+        }
+      },
+      "rule_detector": {
+        "total": 300,
+        "hallucinated": 16,
+        "non_hallucinated": 284,
+        "unknown": 0,
+        "hallucination_rate": 0.0533,
+        "type_distribution": {
+          "object_hallucination": 16
+        },
+        "type_percentages": {
+          "object_hallucination": 100.0
+        }
+      }
+    },
+    "Qwen_Qwen3-VL-8B-Instruct/direct": {
+      "n_samples": 300,
+      "accuracy": {
+        "total": 300,
+        "correct": 257,
+        "accuracy": 0.8567,
+        "source": "outputs\\metrics_v2\\pope_Qwen_Qwen3-VL-8B-Instruct_direct_metrics.json"
+      },
+      "mllm_judge": {
+        "total": 300,
+        "hallucinated": 8,
+        "non_hallucinated": 291,
+        "unknown": 1,
+        "hallucination_rate": 0.0267,
+        "type_distribution": {
+          "visual_grounding_error": 8
+        },
+        "type_percentages": {
+          "visual_grounding_error": 100.0
+        }
+      },
+      "rule_detector": {
+        "total": 300,
+        "hallucinated": 8,
+        "non_hallucinated": 292,
+        "unknown": 0,
+        "hallucination_rate": 0.0267,
+        "type_distribution": {
+          "object_hallucination": 8
+        },
+        "type_percentages": {
+          "object_hallucination": 100.0
+        }
+      }
+    },
+    "Qwen_Qwen3-VL-8B-Instruct/cot": {
+      "n_samples": 300,
+      "accuracy": {
+        "total": 300,
+        "correct": 254,
+        "accuracy": 0.8467,
+        "source": "outputs\\metrics_v2\\pope_Qwen_Qwen3-VL-8B-Instruct_cot_metrics.json"
+      },
+      "mllm_judge": {
+        "total": 300,
+        "hallucinated": 22,
+        "non_hallucinated": 278,
+        "unknown": 0,
+        "hallucination_rate": 0.0733,
+        "type_distribution": {
+          "visual_grounding_error": 22
+        },
+        "type_percentages": {
+          "visual_grounding_error": 100.0
+        }
+      },
+      "rule_detector": {
+        "total": 300,
+        "hallucinated": 24,
+        "non_hallucinated": 276,
+        "unknown": 0,
+        "hallucination_rate": 0.08,
+        "type_distribution": {
+          "object_hallucination": 24
+        },
+        "type_percentages": {
+          "object_hallucination": 100.0
+        }
+      }
+    }
+  },
+  "mathvista": {
+    "gpt-5.4/direct": {
+      "n_samples": 100,
+      "accuracy": {
+        "total": 100,
+        "correct": 71,
+        "accuracy": 0.71,
+        "source": "outputs\\metrics_v2\\mathvista_gpt-5.4_direct_metrics.json"
+      },
+      "mllm_judge": {
+        "total": 100,
+        "hallucinated": 6,
+        "non_hallucinated": 93,
+        "unknown": 1,
+        "hallucination_rate": 0.06,
+        "type_distribution": {
+          "visual_grounding_error": 6
+        },
+        "type_percentages": {
+          "visual_grounding_error": 100.0
+        }
+      }
+    },
+    "gpt-5.4/cot": {
+      "n_samples": 100,
+      "accuracy": {
+        "total": 100,
+        "correct": 74,
+        "accuracy": 0.74,
+        "source": "outputs\\metrics_v2\\mathvista_gpt-5.4_cot_metrics.json"
+      },
+      "mllm_judge": {
+        "total": 100,
+        "hallucinated": 8,
+        "non_hallucinated": 91,
+        "unknown": 1,
+        "hallucination_rate": 0.08,
+        "type_distribution": {
+          "visual_grounding_error": 7,
+          "reasoning_hallucination": 1
+        },
+        "type_percentages": {
+          "visual_grounding_error": 87.5,
+          "reasoning_hallucination": 12.5
+        }
+      }
+    },
+    "Qwen_Qwen3-VL-8B-Instruct/direct": {
+      "n_samples": 100,
+      "accuracy": {
+        "total": 100,
+        "correct": 49,
+        "accuracy": 0.49,
+        "source": "outputs\\metrics_v2\\mathvista_Qwen_Qwen3-VL-8B-Instruct_direct_metrics.json"
+      },
+      "mllm_judge": {
+        "total": 100,
+        "hallucinated": 16,
+        "non_hallucinated": 84,
+        "unknown": 0,
+        "hallucination_rate": 0.16,
+        "type_distribution": {
+          "factual_inconsistency": 2,
+          "visual_grounding_error": 14
+        },
+        "type_percentages": {
+          "factual_inconsistency": 12.5,
+          "visual_grounding_error": 87.5
+        }
+      }
+    },
+    "Qwen_Qwen3-VL-8B-Instruct/cot": {
+      "n_samples": 100,
+      "accuracy": {
+        "total": 100,
+        "correct": 33,
+        "accuracy": 0.33,
+        "source": "outputs\\metrics_v2\\mathvista_Qwen_Qwen3-VL-8B-Instruct_cot_metrics.json"
+      },
+      "mllm_judge": {
+        "total": 100,
+        "hallucinated": 33,
+        "non_hallucinated": 66,
+        "unknown": 1,
+        "hallucination_rate": 0.33,
+        "type_distribution": {
+          "visual_grounding_error": 25,
+          "reasoning_hallucination": 8
+        },
+        "type_percentages": {
+          "visual_grounding_error": 75.8,
+          "reasoning_hallucination": 24.2
+        }
+      }
+    }
+  },
+  "logicocr": {
+    "gpt-5.4/direct": {
+      "n_samples": 50,
+      "accuracy": {
+        "total": 50,
+        "correct": 38,
+        "accuracy": 0.76,
+        "source": "outputs\\metrics_v2\\logicocr_gpt-5.4_direct_metrics.json"
+      },
+      "mllm_judge": {
+        "total": 50,
+        "hallucinated": 0,
+        "non_hallucinated": 50,
+        "unknown": 0,
+        "hallucination_rate": 0.0,
+        "type_distribution": {},
+        "type_percentages": {}
+      }
+    },
+    "gpt-5.4/cot": {
+      "n_samples": 50,
+      "accuracy": {
+        "total": 50,
+        "correct": 42,
+        "accuracy": 0.84,
+        "source": "outputs\\metrics_v2\\logicocr_gpt-5.4_cot_metrics.json"
+      },
+      "mllm_judge": {
+        "total": 50,
+        "hallucinated": 0,
+        "non_hallucinated": 50,
+        "unknown": 0,
+        "hallucination_rate": 0.0,
+        "type_distribution": {},
+        "type_percentages": {}
+      }
+    },
+    "Qwen_Qwen3-VL-8B-Instruct/direct": {
+      "n_samples": 50,
+      "accuracy": {
+        "total": 50,
+        "correct": 30,
+        "accuracy": 0.6,
+        "source": "outputs\\metrics_v2\\logicocr_Qwen_Qwen3-VL-8B-Instruct_direct_metrics.json"
+      },
+      "mllm_judge": {
+        "total": 50,
+        "hallucinated": 0,
+        "non_hallucinated": 50,
+        "unknown": 0,
+        "hallucination_rate": 0.0,
+        "type_distribution": {},
+        "type_percentages": {}
+      }
+    },
+    "Qwen_Qwen3-VL-8B-Instruct/cot": {
+      "n_samples": 50,
+      "accuracy": {
+        "total": 50,
+        "correct": 33,
+        "accuracy": 0.66,
+        "source": "outputs\\metrics_v2\\logicocr_Qwen_Qwen3-VL-8B-Instruct_cot_metrics.json"
+      },
+      "mllm_judge": {
+        "total": 50,
+        "hallucinated": 7,
+        "non_hallucinated": 43,
+        "unknown": 0,
+        "hallucination_rate": 0.14,
+        "type_distribution": {
+          "reasoning_hallucination": 7
+        },
+        "type_percentages": {
+          "reasoning_hallucination": 100.0
+        }
+      }
+    }
+  }
+}

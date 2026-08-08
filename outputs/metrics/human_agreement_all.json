@@ -1,0 +1,89 @@
+{
+  "annotation_set": {
+    "n_total": 60,
+    "task_counts": {
+      "mathvista": 20,
+      "pope": 20,
+      "logicocr": 20
+    },
+    "human_label_counts": {
+      "False": 50,
+      "True": 10
+    },
+    "human_type_counts": {
+      "none": 50,
+      "visual_grounding_error": 8,
+      "factual_inconsistency": 2
+    },
+    "judge_label_counts": {
+      "False": 30,
+      "True": 30
+    },
+    "judge_type_counts": {
+      "none": 30,
+      "factual_inconsistency": 24,
+      "visual_grounding_error": 1,
+      "reasoning_hallucination": 5
+    }
+  },
+  "llm_judge_vs_human": {
+    "overall": {
+      "n": 60,
+      "accuracy": 0.6667,
+      "precision": 0.3333,
+      "recall": 1.0,
+      "f1": 0.5,
+      "cohens_kappa": 0.3333,
+      "confusion_matrix": {
+        "TP": 10,
+        "FP": 20,
+        "TN": 30,
+        "FN": 0
+      }
+    },
+    "by_task": {
+      "logicocr": {
+        "n": 20,
+        "accuracy": 0.35,
+        "precision": 0.0,
+        "recall": 0,
+        "f1": 0,
+        "cohens_kappa": 0.0,
+        "confusion_matrix": {
+          "TP": 0,
+          "FP": 13,
+          "TN": 7,
+          "FN": 0
+        }
+      },
+      "mathvista": {
+        "n": 20,
+        "accuracy": 0.95,
+        "precision": 0.875,
+        "recall": 1.0,
+        "f1": 0.9333,
+        "cohens_kappa": 0.8936,
+        "confusion_matrix": {
+          "TP": 7,
+          "FP": 1,
+          "TN": 12,
+          "FN": 0
+        }
+      },
+      "pope": {
+        "n": 20,
+        "accuracy": 0.7,
+        "precision": 0.3333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "cohens_kappa": 0.3548,
+        "confusion_matrix": {
+          "TP": 3,
+          "FP": 6,
+          "TN": 11,
+          "FN": 0
+        }
+      }
+    }
+  }
+}

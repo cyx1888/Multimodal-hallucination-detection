@@ -1,0 +1,28 @@
+{
+  "task": "mathvista",
+  "input_file": "outputs\\judge_results_v2\\mathvista_gpt-5.4_direct_judged.jsonl",
+  "n_samples": 100,
+  "task_performance": {
+    "total": 100,
+    "correct": 71,
+    "invalid": 0,
+    "accuracy": 0.71
+  },
+  "judge_hallucination": {
+    "total": 100,
+    "hallucinated": 5,
+    "non_hallucinated": 95,
+    "unknown": 0,
+    "hallucination_rate": 0.05,
+    "type_distribution": {
+      "factual_inconsistency": 1,
+      "visual_grounding_error": 3,
+      "reasoning_hallucination": 1
+    },
+    "type_percentages": {
+      "factual_inconsistency": 20.0,
+      "visual_grounding_error": 60.0,
+      "reasoning_hallucination": 20.0
+    }
+  }
+}

@@ -1,0 +1,22 @@
+# Human Annotation Template
+# Fields for each annotation record
+
+sample_id: ""
+task: ""                # pope / mathvista
+image_id: ""
+question: ""
+ground_truth: ""
+model_name: ""          # Hidden if blind=True
+prompt_mode: ""         # direct / cot
+model_answer: ""
+model_rationale: ""
+
+# === Human Labels ===
+human_is_hallucination: null     # true / false
+human_hallucination_type: ""     # visual_grounding_error / factual_inconsistency / reasoning_hallucination / none
+human_confidence: 0.0            # 0.0 to 1.0
+human_notes: ""
+
+# === Auto Detector Results (hidden during annotation) ===
+auto_is_hallucination: null
+auto_hallucination_type: ""

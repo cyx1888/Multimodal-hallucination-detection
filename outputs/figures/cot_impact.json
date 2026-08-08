@@ -1,0 +1,62 @@
+[
+  {
+    "task": "logicocr",
+    "model": "Qwen/Qwen3-VL-8B-Instruct",
+    "direct_accuracy": 0.6,
+    "cot_accuracy": 0.66,
+    "accuracy_delta": 0.06,
+    "direct_hallucination_rate": 0.0,
+    "cot_hallucination_rate": 0.28,
+    "hallucination_rate_delta": 0.28
+  },
+  {
+    "task": "logicocr",
+    "model": "gpt-5.4",
+    "direct_accuracy": 0.76,
+    "cot_accuracy": 0.84,
+    "accuracy_delta": 0.08,
+    "direct_hallucination_rate": 0.0,
+    "cot_hallucination_rate": 0.08,
+    "hallucination_rate_delta": 0.08
+  },
+  {
+    "task": "mathvista",
+    "model": "Qwen/Qwen3-VL-8B-Instruct",
+    "direct_accuracy": 0.49,
+    "cot_accuracy": 0.33,
+    "accuracy_delta": -0.16,
+    "direct_hallucination_rate": 0.01,
+    "cot_hallucination_rate": 0.29,
+    "hallucination_rate_delta": 0.28
+  },
+  {
+    "task": "mathvista",
+    "model": "gpt-5.4",
+    "direct_accuracy": 0.71,
+    "cot_accuracy": 0.74,
+    "accuracy_delta": 0.03,
+    "direct_hallucination_rate": 0.05,
+    "cot_hallucination_rate": 0.15,
+    "hallucination_rate_delta": 0.1
+  },
+  {
+    "task": "pope",
+    "model": "Qwen/Qwen3-VL-8B-Instruct",
+    "direct_accuracy": 0.8567,
+    "cot_accuracy": 0.8467,
+    "accuracy_delta": -0.01,
+    "direct_hallucination_rate": 0.0,
+    "cot_hallucination_rate": 0.0067,
+    "hallucination_rate_delta": 0.0067
+  },
+  {
+    "task": "pope",
+    "model": "gpt-5.4",
+    "direct_accuracy": 0.87,
+    "cot_accuracy": 0.8552,
+    "accuracy_delta": -0.0148,
+    "direct_hallucination_rate": 0.0,
+    "cot_hallucination_rate": 0.0967,
+    "hallucination_rate_delta": 0.0967
+  }
+]

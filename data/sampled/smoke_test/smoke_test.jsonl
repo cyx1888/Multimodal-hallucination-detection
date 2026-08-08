@@ -1,0 +1,5 @@
+{"sample_id": "smoke_001", "task": "pope", "question": "Is there a red square in the image?", "ground_truth": "yes", "image_path": "test_001.png"}
+{"sample_id": "smoke_002", "task": "pope", "question": "Is there a dog in the image?", "ground_truth": "no", "image_path": "test_001.png"}
+{"sample_id": "smoke_003", "task": "pope", "question": "Is there text in the image?", "ground_truth": "yes", "image_path": "test_002.png"}
+{"sample_id": "smoke_004", "task": "mathvista", "question": "What is 2 + 3?", "ground_truth": "5", "image_path": "test_004.png"}
+{"sample_id": "smoke_005", "task": "mathvista", "question": "How many bars are in the chart?", "ground_truth": "3", "image_path": "test_003.png"}

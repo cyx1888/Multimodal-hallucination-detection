@@ -1,0 +1,163 @@
+{
+  "annotation_set": {
+    "n_total": 40,
+    "task_counts": {
+      "mathvista": 20,
+      "pope": 20
+    },
+    "human_label_counts": {
+      "False": 30,
+      "True": 10
+    },
+    "human_type_counts": {
+      "none": 30,
+      "visual_grounding_error": 8,
+      "factual_inconsistency": 2
+    },
+    "judge_label_counts": {
+      "False": 23,
+      "True": 17
+    },
+    "judge_type_counts": {
+      "none": 23,
+      "factual_inconsistency": 15,
+      "visual_grounding_error": 1,
+      "reasoning_hallucination": 1
+    }
+  },
+  "llm_judge_vs_human": {
+    "overall": {
+      "n": 40,
+      "skipped": 0,
+      "accuracy": 0.825,
+      "precision": 0.5882,
+      "recall": 1.0,
+      "f1": 0.7407,
+      "cohens_kappa": 0.6216,
+      "confusion_matrix": {
+        "TP": 10,
+        "FP": 7,
+        "TN": 23,
+        "FN": 0
+      }
+    },
+    "by_task": {
+      "mathvista": {
+        "n": 20,
+        "skipped": 0,
+        "accuracy": 0.95,
+        "precision": 0.875,
+        "recall": 1.0,
+        "f1": 0.9333,
+        "cohens_kappa": 0.8936,
+        "confusion_matrix": {
+          "TP": 7,
+          "FP": 1,
+          "TN": 12,
+          "FN": 0
+        }
+      },
+      "pope": {
+        "n": 20,
+        "skipped": 0,
+        "accuracy": 0.7,
+        "precision": 0.3333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "cohens_kappa": 0.3548,
+        "confusion_matrix": {
+          "TP": 3,
+          "FP": 6,
+          "TN": 11,
+          "FN": 0
+        }
+      }
+    },
+    "by_model": {
+      "Qwen/Qwen3-VL-8B-Instruct": {
+        "n": 23,
+        "skipped": 0,
+        "accuracy": 0.8261,
+        "precision": 0.6364,
+        "recall": 1.0,
+        "f1": 0.7778,
+        "cohens_kappa": 0.6462,
+        "confusion_matrix": {
+          "TP": 7,
+          "FP": 4,
+          "TN": 12,
+          "FN": 0
+        }
+      },
+      "gpt-5.4": {
+        "n": 17,
+        "skipped": 0,
+        "accuracy": 0.8235,
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6667,
+        "cohens_kappa": 0.5641,
+        "confusion_matrix": {
+          "TP": 3,
+          "FP": 3,
+          "TN": 11,
+          "FN": 0
+        }
+      }
+    },
+    "by_prompt": {
+      "cot": {
+        "n": 23,
+        "skipped": 0,
+        "accuracy": 0.7826,
+        "precision": 0.5455,
+        "recall": 1.0,
+        "f1": 0.7059,
+        "cohens_kappa": 0.556,
+        "confusion_matrix": {
+          "TP": 6,
+          "FP": 5,
+          "TN": 12,
+          "FN": 0
+        }
+      },
+      "direct": {
+        "n": 17,
+        "skipped": 0,
+        "accuracy": 0.8824,
+        "precision": 0.6667,
+        "recall": 1.0,
+        "f1": 0.8,
+        "cohens_kappa": 0.7213,
+        "confusion_matrix": {
+          "TP": 4,
+          "FP": 2,
+          "TN": 11,
+          "FN": 0
+        }
+      }
+    }
+  },
+  "rule_detector_vs_human": {
+    "pope": {
+      "n": 20,
+      "skipped": 0,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "cohens_kappa": 1.0,
+      "confusion_matrix": {
+        "TP": 3,
+        "FP": 0,
+        "TN": 17,
+        "FN": 0
+      }
+    }
+  },
+  "type_agreement_when_both_hallucinated": {
+    "n": 10,
+    "exact_type_matches": 2,
+    "accuracy": 0.2
+  }
+}

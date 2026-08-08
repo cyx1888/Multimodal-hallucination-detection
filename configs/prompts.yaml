@@ -1,0 +1,106 @@
+# Prompt templates for answer generation and hallucination detection
+
+# === Answer Generation Prompts ===
+
+pope_direct: |
+  Answer the question based only on the image.
+  Give a short answer: yes or no.
+
+  Question: {question}
+
+pope_cot: |
+  Answer the question based only on the image.
+  First inspect the relevant visual evidence step by step, then give the final answer as yes or no.
+
+  Question: {question}
+  Final answer must be exactly one of: yes, no.
+
+mathvista_direct: |
+  Answer the question based only on the image and the question.
+  Give the final answer concisely.
+
+  Question: {question}
+
+logicocr_direct: |
+  Read the text in the image and answer the question.
+  Choose the best option if options are provided.
+  Give only the final answer, preferably as a single option letter such as A, B, C, or D.
+
+  Question:
+  {question}
+
+logicocr_cot: |
+  Read the text in the image carefully, then reason step by step.
+  Do not invent text that is not visible in the image.
+  At the end, provide the final answer in exactly this format:
+  Final answer: <A/B/C/D or short answer>
+
+  Question:
+  {question}
+
+mathvista_cot: |
+  Solve the problem based only on the image and the question.
+  Reason step by step using only visible evidence.
+  Then provide the final answer in the format: Final answer: <answer>.
+
+  Question: {question}
+
+# === Judge Prompts ===
+
+judge_image_zero_shot: |
+  You are an image-aware hallucination judge for multimodal model answers.
+  You are given the image, the question, the ground-truth answer, the model's answer,
+  and the model's rationale if available.
+
+  Your job is NOT to simply check whether the final answer equals the ground truth.
+  First inspect the image and the relevant visual/text evidence. Then decide whether
+  the model output contains a hallucination.
+
+  IMPORTANT BOUNDARY - wrong answer is NOT always hallucination:
+  A hallucination requires the model to assert, fabricate, invent, misread, or reason from
+  something unsupported by the image, the question, or the provided constraints.
+  If the model only gives a wrong option/number/short answer and does not make any
+  checkable unsupported claim, label it as non-hallucination.
+
+  Image-aware decision rules:
+  1. Use the image as primary evidence for visual objects, attributes, counts, spatial
+     relations, chart values, and OCR/text content.
+  2. Use the ground-truth answer as a reference label, but do not label hallucination
+     solely because the model's final answer differs from the ground truth.
+  3. If a short answer itself asserts a visual fact or relation that is contradicted by
+     the image (for example, saying an absent object is present, or saying a chart
+     relation is true when the chart shows it is false), it can be hallucination.
+  4. For POPE-style object-existence questions, answering "yes" when the target object
+     is absent is object hallucination / visual_grounding_error. Answering "no" when
+     the target object is present is usually an omission / false negative, not
+     hallucination, unless the rationale fabricates visual evidence.
+  5. For LogicOCR multiple-choice questions, a wrong option letter alone is not
+     hallucination. Label hallucination only if the model misreads visible text,
+     fabricates text evidence, invents layout relationships, or uses unsupported
+     reasoning premises.
+
+  Hallucination type definitions:
+  - visual_grounding_error: The model asserts visual or OCR/text content not supported
+    by the image. This includes fabricated objects, wrong visual attributes/counts,
+    wrong chart values/relations, misread image text, or invented layout relations.
+  - factual_inconsistency: The model makes an explicit factual claim that conflicts
+    with the question statement, ground-truth answer, or provided non-visual factual
+    constraints. A bare wrong option/number is not enough.
+  - reasoning_hallucination: The model's rationale introduces fabricated or unsupported
+    evidence, assumptions, intermediate values, or logical premises. A simple reasoning
+    mistake is not enough unless unsupported content is introduced.
+
+  Given:
+  - Question: {question}
+  - Ground-truth answer: {ground_truth}
+  - Model answer: {model_answer}
+  - Model rationale (if CoT): {rationale}
+
+  Return only valid JSON (no markdown, no extra text):
+  {
+    "hallucination": true or false,
+    "type": "visual_grounding_error" | "factual_inconsistency" | "reasoning_hallucination" | "none",
+    "confidence": number from 0 to 1,
+    "image_evidence": "brief description of the visual/text evidence you checked",
+    "brief_reason": "one sentence explanation"
+  }

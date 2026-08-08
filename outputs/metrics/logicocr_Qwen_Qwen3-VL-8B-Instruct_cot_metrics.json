@@ -1,0 +1,28 @@
+{
+  "task": "logicocr",
+  "input_file": "outputs\\judge_results_v2\\logicocr_Qwen_Qwen3-VL-8B-Instruct_cot_judged.jsonl",
+  "n_samples": 50,
+  "task_performance": {
+    "total": 50,
+    "correct": 33,
+    "invalid": 3,
+    "accuracy": 0.66
+  },
+  "judge_hallucination": {
+    "total": 50,
+    "hallucinated": 14,
+    "non_hallucinated": 36,
+    "unknown": 0,
+    "hallucination_rate": 0.28,
+    "type_distribution": {
+      "visual_grounding_error": 2,
+      "factual_inconsistency": 2,
+      "reasoning_hallucination": 10
+    },
+    "type_percentages": {
+      "visual_grounding_error": 14.3,
+      "factual_inconsistency": 14.3,
+      "reasoning_hallucination": 71.4
+    }
+  }
+}
