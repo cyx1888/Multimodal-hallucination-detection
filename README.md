@@ -37,7 +37,6 @@ The repository is organized as a reproducible code package.
     sampled/               Sample metadata JSONL files; images are regenerated locally
   outputs/
     metrics/               Final task and agreement metrics
-    figures/               Final analysis JSON for charts and failure cases
     mllm_judge_full/       Compact image-aware judge metric summaries
   scripts/                 Data preparation, inference, judging, evaluation, and analysis
 ```
@@ -131,7 +130,7 @@ Run error analysis over judged outputs:
 python scripts/analyze_errors.py ^
   --input_dir outputs/judge_results ^
   --annotation data/annotations/human_annotation_all_merged.jsonl ^
-  --output_dir outputs/figures
+  --output_dir
 ```
 
 Generate the compact image-aware judge summary after full judged JSONL files are available:
@@ -145,7 +144,6 @@ python scripts/generate_mllm_summary.py
 The repository includes compact final result files:
 
 - `outputs/metrics/*.json`: task metrics and human-agreement metrics
-- `outputs/figures/*.json`: CoT impact, type distribution, human disagreements, and failure cases
 - `outputs/mllm_judge_full/full_mllm_judge_summary.*`: full image-aware judge summary tables
 
 These files are small enough for review and preserve the key experimental evidence without committing raw API responses or large datasets.
